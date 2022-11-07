@@ -8,11 +8,6 @@ It was created using:
 - Solidity (Brownie, solc)
 - JavaScript (React, useDapp, MaterialUI)
 
-You can view it at:
-- https://pixellegion.site/
-- https://polygonscan.com/address/0xc50BC666462CbFc5Bf2EFD2e329E2A1154e8fd15
-- https://opensea.io/collection/pixellegion
-
 List of contents:
 1. <a href="#1-image-generation">Image generation</a>
 2. <a href="#2-smart-contract">Smart contract</a>
