@@ -24,7 +24,7 @@ For this part we assume to be in `/PixelLegion-1-image-generation/` folder.
     - I have chosen to use only few colors, to make it easy to pick the single color with python and randomize it.
     - It is important at this point to group assets into folders and give them names that you want to be displayed as OpenSea NFT attributes - you will save a lot of work later.
     - You can find the example in `psd_project/`
-2. Export the assets to folders with tool like <a href="https://github.com/antipalindrome/Photoshop-Export-Layers-to-Files-Fast">Photoshop-Export-Layers-to-Files-Fast</a>. Note that there is option to save layers groups as directories. The result should be similar to `input/Assets/`
+2. there is option to save layers groups as directories. The result should be similar to `input/Assets/`
 3. Install the required packages 
     ```
     pip install Pillow 
@@ -40,7 +40,7 @@ For this part we assume to be in `/PixelLegion-1-image-generation/` folder.
                   ...}
         ```
     - If `assets` dict will differ from `input/Assets/` structure, then during assets paths initialization an error will be raised - follow the displayed message to find the differences and fix them.
-    - `color-palette` is a dictionary of colors that can replace chosen colors of your assets. You can find more colors at <a href="https://www.rapidtables.com/web/css/css-color.html">https://www.rapidtables.com/web/css/css-color.html</a>
+    - `color-palette` is a dictionary of colors that can replace chosen colors of your assets. 
         ```python
         color_palette = {'Crimson': [220, 20, 60, 255],
                          ...}
@@ -66,15 +66,10 @@ For this part we assume to be in `/PixelLegion-1-image-generation/` folder.
         ```
        and in place of `***` placeholders provide your API keys from Pinata.
     - In `main()` function set `metadata['description']` to description of each NFT.
-    - As IPFS hash format I used CIDv1 because it works with Firefox and <a href="https://addons.mozilla.org/pl/firefox/addon/ipfs-companion/">IPFS companion</a> by just entering `ipfs://` and hash in browser, e.g. <a href="ipfs://bafkreicheibnu6bapmyroqmaauqbomc53xbg2imvqmcwn2fwustmmr6oby">ipfs://bafkreicheibnu6bapmyroqmaauqbomc53xbg2imvqmcwn2fwustmmr6oby</a>
+    - As IPFS hash format I used CIDv1 because it works with Firefox 
     - `main()` function from `upload.py` will upload all images listed in `output/data.csv`, create metadata for them using `input/template_metadata.json` as template, and upload them as well. Metadata and urls will be saved in `output/data_uploaded.csv`.
-    - Example uploaded metadata:
-    <a href="https://ipfs.io/ipfs/bafkreicheibnu6bapmyroqmaauqbomc53xbg2imvqmcwn2fwustmmr6oby/">https://ipfs.io/ipfs/bafkreicheibnu6bapmyroqmaauqbomc53xbg2imvqmcwn2fwustmmr6oby/</a>
-    which contains `image` key, with value:
-    <a href="https://ipfs.io/ipfs/bafkreidswhjpq6glbsq6jfa3j6qxsess7d3kqpqmxwbkrkbq6hv6vxgeo4/">https://ipfs.io/ipfs/bafkreidswhjpq6glbsq6jfa3j6qxsess7d3kqpqmxwbkrkbq6hv6vxgeo4/</a>
-    - Metadata in this format is supported by OpenSea, if you use it later in smart contract as tokenURI, the NFT properties will be displayed correctly which you can check by clicking at properties button at 
-    <a href="https://opensea.io/assets/matic/0xc50bc666462cbfc5bf2efd2e329e2a1154e8fd15/19">https://opensea.io/assets/matic/0xc50bc666462cbfc5bf2efd2e329e2a1154e8fd15/19</a>
-    - You can find functions for creating banners, smaller images, and unpinning everything at once from pinata in case of mistake in `utils.py`
+     - Metadata in this format is supported by OpenSea, if you use it later in smart contract as tokenURI, the NFT properties will be displayed correctly.
+    - You can find functions for creating banners, smaller images, and unpinning everything at once from pinata in case of mistake in `utils.py`.
 
 ### 2. Smart contract
 
