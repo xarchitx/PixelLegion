@@ -82,12 +82,9 @@ For this part we assume to be in `/PixelLegion-1-image-generation/` folder.
     - You can find functions for creating banners, smaller images, and unpinning everything at once from pinata in case of mistake in `utils.py`
 
 ### 2. Smart contract
-For this part we assume to be in `/PixelLegion-2-smart-contract/` folder.
-1. Create your ERC-721 (or ERC-1155) smart contract. There are numerous tutorials for Solidity and NFT contracts, I recommend:
-    - https://www.youtube.com/watch?v=M576WGiDBdQ
-    - https://www.youtube.com/watch?v=p36tXHX1JD8
-    - IMO you can skip parts about VRFs (Verifiable Random Functions) because it's an overkill for simple NFT projects (complicates stuff a lot, requires paid LINK tokens, and I haven't seen any NFT projects actually using it)
-    
+
+1. Create your ERC-721 (or ERC-1155) smart contract. 
+   
 2. If you already went through some tutorials you can find source code of my smart contract at `contracts/PixelLegionMarket.sol`, I deployed it using the following steps:
     - Install <a href="https://eth-brownie.readthedocs.io/en/stable/">Brownie</a> for easy deployment.
     - Use `solc` for Solidity compilation.
@@ -109,7 +106,6 @@ For this part we assume to be in `/PixelLegion-2-smart-contract/` folder.
 ### 3. Front-end
 For this part we assume to be in `/PixelLegion-3-front-end/` folder.
 - I decided to not make separate database since it is only 100 images. For larger projects you might want to make one.
-- I was using `React` with `useDapp` and `MaterialUI`. For React and MaterialUI theres a lot of tutorials online, and for useDapp you can learn the basics at Lesson 13 of <a href="https://www.youtube.com/watch?v=M576WGiDBdQ">https://www.youtube.com/watch?v=M576WGiDBdQ</a>
-- The website is hosted on github-pages with the help of <a href="https://github.com/rafgraph/spa-github-pages">spa-github-pages</a>
+- I was using `React` with `useDapp` and `MaterialUI`. 
 - As it was my first project in React, you can probably look at front-end source code e.g. for references on how to work with useDapp, but other than that, relying only on it might not be the best idea :)
 
